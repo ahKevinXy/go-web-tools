@@ -133,12 +133,12 @@ func (l *List[T]) Remove(e *Element[T]) T {
 	return e.Value
 }
 
-// 从头部移除
+// RemoveFront 从头部移除
 func (l *List[T]) RemoveFront() T {
 	return l.Remove(l.Front())
 }
 
-// 从尾部移除
+// RemoveBack 从尾部移除
 func (l *List[T]) RemoveBack() T {
 	return l.Remove(l.Back())
 }
@@ -233,7 +233,7 @@ func (l *List[T]) PushFrontList(other *List[T]) {
 	}
 }
 
-// 是否为空
+// Empty 是否为空
 func (l *List[T]) Empty() bool {
 	return l.Len() == 0
 }

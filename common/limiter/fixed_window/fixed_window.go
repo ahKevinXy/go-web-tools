@@ -25,6 +25,12 @@ func NewFixedWindowLimiter(limit int, window time.Duration) *FixedWindowLimiter 
 	}
 }
 
+// TryAcquire
+//  @Description: 是否可以接收
+//  @receiver l
+//  @return bool
+//  @Author  ahKevinXy
+//  @Date2023-03-29 17:45:24
 func (l *FixedWindowLimiter) TryAcquire() bool {
 	l.mutex.Lock()
 	defer l.mutex.Unlock()

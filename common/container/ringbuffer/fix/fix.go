@@ -6,10 +6,10 @@ import (
 	mmath "github.com/ahKevinXy/go-web-tools/common/math"
 )
 
-// 最大长度
+// MaxSize 最大长度
 const MaxSize = math.MaxInt64
 
-// 固定长度
+// Ring 固定长度
 // 单生产者和单消费者情况下是线程安全性的，但是不能用Reset()方法
 type Ring[T any] struct {
 	in   uint64 // 写索引
@@ -18,6 +18,11 @@ type Ring[T any] struct {
 	data []T    // 数据
 }
 
+// New[T any]
+//  @Description:  初始化最新
+//  @param size
+//  @return *Ring[T]
+//
 func New[T any](size uint64) *Ring[T] {
 	if size == 0 {
 		panic("size must be greater than 0")
