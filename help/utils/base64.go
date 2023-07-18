@@ -32,6 +32,8 @@ func Base64DecodeToByte(data string) []byte {
 	decodedByte, _ := base64.StdEncoding.DecodeString(data)
 	return decodedByte
 }
+// Base64EncodeToByte
+// 添加 byte 数据
 func Base64EncodeToByte(data []byte) string {
 	return base64.StdEncoding.EncodeToString(data)
 }

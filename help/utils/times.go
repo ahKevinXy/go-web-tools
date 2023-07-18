@@ -27,3 +27,4 @@ func GetTimeDir() string {
 
 	return n.Format(GolandDayTimePath)
 }
+
