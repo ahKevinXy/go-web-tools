@@ -5,8 +5,8 @@ import "time"
 const (
 	GoLangTimeFormat      = "2006-01-02 15:04:05"
 	GoLangPointTimeFormat = "2006.01.02"
-	GolandDayTimeFormat   = "2006-01-02"
-	GolandDayTimePath     = "2006/01/02"
+	GolangDayTimeFormat   = "2006-01-02"
+	GolangDayTimePath     = "2006/01/02"
 )
 
 const (
@@ -25,6 +25,6 @@ const (
 func GetTimeDir() string {
 	n := time.Now()
 
-	return n.Format(GolandDayTimePath)
+	return n.Format(GolangDayTimePath)
 }
 
